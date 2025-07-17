@@ -1,37 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pine.AI</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pine.AI</title>
 
-    <!-- Add your styling CSS if necessary -->
-    <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset some default browser styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #4b6cb7, #182848);
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffab00;
+    }
+
+    logo {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #ffab00;
+      letter-spacing: 2px;
+      font-family: 'Courier New', Courier, monospace;
+      user-select: none;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ffab00;
+      text-shadow: 1px 1px 5px rgba(255,171,0,0.6);
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 40px;
+      color: #cfcfcf;
+    }
+
+    #features {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 800px;
+    }
+
+    #features > div {
+      background: rgba(255, 171, 0, 0.1);
+      border: 2px solid #ffab00;
+      border-radius: 12px;
+      padding: 25px 30px;
+      width: 220px;
+      box-shadow: 0 8px 20px rgba(255, 171, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    #features > div:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(255, 171, 0, 0.5);
+    }
+
+    #features h3 {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+      color: #ffca28;
+    }
+
+    #features p {
+      font-size: 1rem;
+      color: #f0e68c;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.4);
+      color: #aaa;
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 0.9rem;
+      user-select: none;
+      border-top: 1px solid #ffab00;
+    }
+
+    /* Fade in animation */
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      #features {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #features > div {
+        width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- Navigation links go here -->
-        </nav>
-        <logo>
-            <!-- Your logo here -->
-        </logo>
-    </header>
+  <header>
+    <logo>Pine.AI</logo>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
 
-    <main>
-        <!-- Main content goes here -->
-        <h1>Welcome to Pine.AI</h1>
-        <p>A cutting-edge AI assistant designed to make your life easier.</p>
-        <section id="features">
-            <!-- List of features -->
-        </section>
-    </main>
+  <main>
+    <h1>Welcome to Pine.AI</h1>
+    <p>A cutting-edge AI assistant designed to make your life easier.</p>
+    <section id="features">
+      <div>
+        <h3>Smart Automation</h3>
+        <p>Automate your tasks efficiently and save time.</p>
+      </div>
+      <div>
+        <h3>24/7 Support</h3>
+        <p>Always ready to assist you anytime, anywhere.</p>
+      </div>
+      <div>
+        <h3>Custom Integrations</h3>
+        <p>Connect with your favorite apps seamlessly.</p>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <!-- Contact information, copyright, etc. go here -->
-    </footer>
+  <footer id="contact">
+    &copy; 2025 Pine.AI — Contact us: support@pine.ai
+  </footer>
 
-    <!-- Add your JavaScript if necessary -->
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
